@@ -49,20 +49,18 @@ def run(cells,labels, my_window,pattern_number):
 			elif checkNeighbours(i,j,cells, labels)==3 and labels[i][j].cget("bg")=="black":
 				labels[i][j].config(bg="white")	
 	
-	my_window.after(500, run,cells,labels,my_window,pattern_number) #Delay in milliseconds
+	my_window.after(100, run,cells,labels,my_window,pattern_number) #Delay in milliseconds
 	my_window.mainloop()
 while(True):
-	choice=int(input(" Enter 1 for Pattern 1\n Enter 2 for Pattern 2\n Enter 3 for Pattern 3\n Enter 4 for exit\n"))
-	if choice==4:
+	choice=int(input(" Enter 1 for Pattern 1\n Enter 2 for Pattern 2\n Enter 9 to exit\n"))
+	if choice==9:
 		quit()
 	else:	
 		if choice==1:
 			setup('Pattern1')
 		if choice==2:
 			setup('Pattern2')
-		if choice==3:
-			setup('Pattern3')
-		
+
 
 
 
